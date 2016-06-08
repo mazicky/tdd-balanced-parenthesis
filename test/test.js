@@ -19,4 +19,12 @@ describe ('Test', () => {
     parenthesis('{()}').should.equal(true)
     parenthesis('{(){}}').should.equal(true)
   })
+
+  it ('final', () => {
+    parenthesis('{{)(}}').should.equal(false)
+    parenthesis('({)}').should.equal(false)
+    parenthesis('[({})]').should.equal(true)
+    parenthesis('{}([])').should.equal(true)
+    parenthesis('{()}[[{}]]').should.equal(true)
+  })
 })

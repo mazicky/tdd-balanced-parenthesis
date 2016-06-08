@@ -1,5 +1,5 @@
 import chai from 'chai'
-import parenhesis from '../src/utils/parenthesis'
+import parenthesis from '../src/utils/judge'
 
 chai.should()
 

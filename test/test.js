@@ -6,5 +6,7 @@ chai.should()
 describe ('Test', () => {
   it ('should return the index of given number', () => {
     parenthesis('(').should.equal(false)
+    parenthesis(')').should.equal(false)
+    parenthesis('()').should.equal(true)
   })
 })

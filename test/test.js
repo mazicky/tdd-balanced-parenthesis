@@ -14,5 +14,9 @@ describe ('Test', () => {
 
   it ('different parethesis', () => {
     parenthesis('{}').should.equal(true)
+    parenthesis('(){}').should.equal(true)
+    parenthesis('({)}').should.equal(false)
+    parenthesis('{()}').should.equal(true)
+    parenthesis('{(){}}').should.equal(true)
   })
 })

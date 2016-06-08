@@ -2,7 +2,8 @@ export default function parenthesis(string) {
   let stack = []
   const parenthesisCompare = {
     '(': ')',
-    '{': '}'
+    '{': '}',
+    '[': ']'
   }
 
   for (let i = 0; i < string.length; ++i) {

@@ -1,17 +1,20 @@
 export default function parenthesis(string) {
-  let stackSize = 0
-  for (let i = 0; i < string.length; ++i) {
-    const char = string.charAt(i)
-    if (char === '(') {
-      stackSize++
-    } else if (char === ')') {
-      stackSize--
-    }
-    if (stackSize < 0)
-      return false
+  let stack = []
+  const parenthesisCompare = {
+    '(': ')'
   }
 
-  if (stackSize === 0) {
+  for (let i = 0; i < string.length; ++i) {
+    const char = string.charAt(i)
+    const last = stack.length ? stack[stack.length-1] : undefined
+    if (last && parenthesisCompare[last] === char) {
+      stack.pop()
+    } else {
+      stack.push(char)
+    }
+  }
+
+  if (stack.length === 0) {
     return true
   }
 

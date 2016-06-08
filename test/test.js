@@ -9,5 +9,6 @@ describe ('Test', () => {
     parenthesis(')').should.equal(false)
     parenthesis('()').should.equal(true)
     parenthesis('((').should.equal(false)
+    parenthesis(')(').should.equal(false)
   })
 })

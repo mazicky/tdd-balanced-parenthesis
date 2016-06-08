@@ -1,9 +1,10 @@
 import chai from 'chai'
+import parenhesis from '../src/utils/parenthesis'
 
 chai.should()
 
 describe ('Test', () => {
   it ('should return the index of given number', () => {
-    [ 1, 2, 3 ].indexOf(1).should.equal(0)
+    parenthesis('(').should.equal(false)
   })
 })
